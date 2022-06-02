@@ -1,0 +1,51 @@
+{
+    "name": "cypress-instamotion",
+    "version": "0.0.1",
+    "description": "This project contains someof use cases of instamotion",
+    "files": [
+      "cypress"
+    ],
+    "scripts": {
+      "e2e": "cypress run",
+      "e2e:chrome": "cypress run --browser chrome",
+      "e2e:record": "cypress run --record",
+      "e2e:record:chrome": "cypress run --record --browser chrome",
+      "e2e:record:edge": "cypress run --record --browser edge",
+      "e2e:record:firefox": "cypress run --record --browser firefox",
+      "e2e:record:parallel": "cypress run --record --parallel",
+      "test:ci": "run-p --race start e2e",
+      "test:ci:chrome": "run-p --race start e2e:chrome",
+      "test:ci:record": "run-p --race start e2e:record",
+      "test:ci:record:chrome": "run-p --race start e2e:record:chrome",
+      "test:ci:record:edge": "run-p --race start e2e:record:edge",
+      "test:ci:record:firefox": "run-p --race start e2e:record:firefox",
+      "test:ci:record:parallel": "run-p --race start e2e:record:parallel",
+      "cy:verify": "cypress verify",
+      "cy:info": "cypress info",
+      "cy:version": "cypress version",
+      "cy:cache:list": "cypress cache list",
+      "cy:run": "cypress run",
+      "cy:run:record": "cypress run --record",
+      "cy:open": "cypress open"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Bhagi4597/cypress-instamotion-task.git"
+    },
+    "author": "Bhagyashri Vaidya",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/Bhagi4597/cypress-instamotion-task/issues"
+    },
+    "homepage": "https://github.com/Bhagi4597/cypress-instamotion-task#readme",
+    "dependencies": {
+      "npm-run-all": "^4.1.2",
+      "serve": "11.3.0"
+    },
+    "devDependencies": {
+      "cypress": "10.0.1"
+    },
+    "engines": {
+      "node": ">=12"
+    }
+  }
