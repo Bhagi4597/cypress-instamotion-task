@@ -43,12 +43,19 @@ describe('instamotion - search car', () => {
     cy.contains('Diesel').should('be.visible')
     cy.contains('Limousine').should('be.visible')
     
-   //verify images count 
-    cy.get('[property=image]').should('have.length', 5)
+    //verify images count 
+    cy.get('[property=image]').should('have.length', 4)
 
      //verify url
      cy.url()
      .should('include', '/autos?category=LIMOUSINE&fuel=DIESEL&make=BMW&modelGroup=_2er%20Reihe&page=1&page-size=27&paymentType=monthlyRate&sort-by=date_published::desc&v3')
+
+     // click on any one from filter result
+     cy.get('img[alt="BMW 218 Active Tourer"]').click()
+     //verify 
+     cy.contains('BMW 218 Active Tourer').should('be.visible')
+     cy.contains('Anfrage starten').should('be.visible')
+     cy.contains('Autoexperten kontaktieren').should('be.visible')
     }) 
   })
   
